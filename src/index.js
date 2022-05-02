@@ -11,4 +11,3 @@ root.render(
     <AppRouter />
   </React.StrictMode>
 );
-

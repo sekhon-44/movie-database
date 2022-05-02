@@ -1,6 +1,11 @@
-function HeroBanner() {
+import BannerMovieCard from "./BannerMovieCard"
+
+function HeroBanner({ bannerMovieData }) {
+
     return (
-        <div>HeroBanner</div>
+        <div className="hero-banner">
+            {bannerMovieData.map(bannerMovie => <BannerMovieCard key={bannerMovie.id} movie={bannerMovie} />)}
+        </div>
     )
 }
 export default HeroBanner
