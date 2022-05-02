@@ -1,0 +1,17 @@
+@use 'typography' as *;
+@use 'variables' as *;
+
+.nav-main {
+    font-family: 'Montserrat-Regular';
+
+    ul {
+        list-style: none;
+
+        a,
+        a:visited,
+        a:focus {
+            color: $textcolors;
+            text-decoration: none;
+        }
+    }
+}

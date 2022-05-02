@@ -1,0 +1,64 @@
+@use 'variables' as *;
+
+.hamburger-menu {
+    margin: 0 20px 20px 0;
+    padding: 0;
+    display: block;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+
+    .button-content {
+        display: block;
+        height: 24px;
+        cursor: pointer;
+    }
+    
+    .bar {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 4px;
+        top: 10px;
+        background-color: $textcolors;
+        transition: all 0.3s ease-in-out;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            top: 10px;
+            left: 0;
+            background-color: $textcolors;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            top: -10px;
+            left: 0;
+            background-color: $textcolors;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+.show {
+    .bar {
+        background-color: transparent;
+    }
+
+    .bar:before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .bar:after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+}
