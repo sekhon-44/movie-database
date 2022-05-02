@@ -1,0 +1,33 @@
+@use 'typography' as *;
+@use 'variables' as *;
+
+.hero-banner {
+    position: relative;
+}
+
+.bannerPoster {    
+    img {
+        width: 100%;
+    }
+}
+
+.bannerInfo {
+    background-color: $bannerbox;
+
+    .title {
+        margin: 0;
+        font-family: 'Montserrat-Bold';
+    }
+
+    .overview {
+        font-family: 'Montserrat-Regular';
+    }
+}
+
+.bannerNav {
+    button {
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: white;
+    }
+}

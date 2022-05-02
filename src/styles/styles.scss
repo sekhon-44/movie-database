@@ -1,1 +1,10 @@
 @use 'variables' as *;
+
+body {
+    margin: 0;
+}
+
+@import 'header';
+@import 'nav-main';
+@import 'hamburger-menu';
+@import 'hero-banner';

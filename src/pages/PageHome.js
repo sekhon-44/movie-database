@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { API_KEY } from "../globals/globals";
-import HeroBanner from "../components/HeroBanner";
+import HeroBanner from "../compenents/HeroBanner";
 
 
 function PageHome() {
@@ -17,17 +17,17 @@ function PageHome() {
 
             const first3Movies = data.results.splice(0, 3);
 
-            setMovieData(first3Movies);
+            setBannerMovieData(first3Movies);
 
         }
 
-        fetchMovies();
+        fetchBannerMovies();
 
     }, []);
 
     return (
         <section className="home-page">
-            <HeroBanner bannerMovieData={bannerMovieData} />
+            {bannerMovieData !== false && <HeroBanner bannerMovieData={bannerMovieData} />}
         </section>
     )
 }
