@@ -14,6 +14,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<PageHome />} />
+            <Route paht="/movie/:id" element={<PageSolo />}></Route>
             <Route path="/about" element={<PageAbout />} />
             <Route path="/favourites" element={<PageFave />} />
           </Routes>

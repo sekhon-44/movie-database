@@ -5,13 +5,14 @@
     position: relative;
 }
 
-.bannerPoster {    
+.banner-movie-card
+.banner-poster {    
     img {
         width: 100%;
     }
 }
 
-.bannerInfo {
+.banner-info {
     background-color: $bannerbox;
 
     .title {
@@ -21,13 +22,5 @@
 
     .overview {
         font-family: 'Montserrat-Regular';
-    }
-}
-
-.bannerNav {
-    button {
-        cursor: pointer;
-        border-radius: 50%;
-        background-color: white;
     }
 }
