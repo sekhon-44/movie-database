@@ -3,12 +3,26 @@
 
 .hero-banner {
     position: relative;
+    overflow: hidden;
 }
 
-.banner-movie-card
+.inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+
+.banner-movie-card {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+}
+
 .banner-poster {    
     img {
-        width: 100%;
+        width: auto;
+        height: 50vh;
     }
 }
 
@@ -22,5 +36,21 @@
 
     .overview {
         font-family: 'Montserrat-Regular';
+    }
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    fill: red;
+
+    button {
+        margin: 5px;
+
+        &.active {
+            background-color: green;
+            color: white;
+        }
     }
 }
