@@ -2,54 +2,81 @@
 @use 'variables' as *;
 
 .hero-banner {
+    font-family: 'Montserrat-Regular';
     position: relative;
     overflow: hidden;
+    width: 100vw;
 }
 
-.inner {
+.poster-container {
     white-space: nowrap;
     transition: transform 0.3s;
-}
 
-.banner-movie-card {
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    width: 100%;
-}
+    .banner-movie-card {
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+        width: 100%;
 
-.banner-poster {    
-    img {
-        width: auto;
-        height: 50vh;
+        .banner-poster {   
+            height: 200px;
+            
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        .banner-info {
+            background-color: $bannerbox;
+            width: 100%;
+        
+            .title {
+                margin: 0;
+                font-family: 'Montserrat-Bold';
+            }
+        
+            .overview {
+                // hide text after 5 lines 
+                white-space: normal;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                line-height: 1.5;
+            }
+        }
+
+        .detail-btn {
+            padding: 0.5rem;
+            border: 1px solid black;
+            border-radius: 0.5rem;
+            background-color: $actioncolors;
+            color: $textcolors;
+            text-decoration: none;
+        }
     }
 }
 
-.banner-info {
-    background-color: $bannerbox;
-
-    .title {
-        margin: 0;
-        font-family: 'Montserrat-Bold';
-    }
-
-    .overview {
-        font-family: 'Montserrat-Regular';
-    }
-}
-
-.indicators {
+.banner-buttons {
     display: flex;
     justify-content: center;
     font-size: 2rem;
-    fill: red;
+    fill: $actioncolors;
+
+    object {
+        pointer-events: none;
+    }
 
     button {
         margin: 5px;
+        cursor: pointer;
+        border: none;
+        border-radius: 50%;
 
         &.active {
-            background-color: green;
+            background-color: $actioncolors;
             color: white;
         }
     }
