@@ -1,6 +1,10 @@
 @use 'typography' as *;
 @use 'variables' as *;
 
+main {
+    background-color: #222831;
+}
+
 .hero-banner {
     font-family: 'Montserrat-Regular';
     position: relative;
@@ -31,10 +35,14 @@
         .banner-info {
             background-color: $bannerbox;
             width: 100%;
+            height: 200px;
+            position: relative;
         
             .title {
                 margin: 0;
+                padding: 0.5rem;
                 font-family: 'Montserrat-Bold';
+                color: $textcolors;
             }
         
             .overview {
@@ -44,17 +52,25 @@
                 -webkit-line-clamp: 5;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
+
                 line-height: 1.5;
+                margin: 0;
+                padding: 0 0.5rem;
+                color: $textcolors;
             }
         }
 
         .detail-btn {
-            padding: 0.5rem;
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.3rem;
             border: 1px solid black;
-            border-radius: 0.5rem;
+            border-radius: 1rem;
             background-color: $actioncolors;
             color: $textcolors;
             text-decoration: none;
+            position: absolute;
+            right: 0;
         }
     }
 }
@@ -64,6 +80,9 @@
     justify-content: center;
     font-size: 2rem;
     fill: $actioncolors;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 
     object {
         pointer-events: none;
@@ -74,6 +93,7 @@
         cursor: pointer;
         border: none;
         border-radius: 50%;
+        width: 1.75rem;
 
         &.active {
             background-color: $actioncolors;

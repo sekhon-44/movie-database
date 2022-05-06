@@ -17,7 +17,7 @@ function BannerMovieCard({ movie }) {
                     {movie.overview}
                 </p>
 
-                <Link className={'detail-btn'} to={`/movie/${movie.id}`}>More Details</Link>
+                <Link className={'detail-btn'} to={`/movie/${movie.id}`}>Details</Link>
             </div>
         </div>
     )
