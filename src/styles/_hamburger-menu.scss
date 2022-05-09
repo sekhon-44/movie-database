@@ -1,12 +1,6 @@
 @use 'variables' as *;
 
 .hamburger-menu {
-    margin-right: 20px;
-    padding: 0;
-    display: block;
-    width: 30px;
-    background-color: transparent;
-    border: none;
 
     .button-content {
         display: block;
@@ -22,6 +16,7 @@
         top: 10px;
         background-color: $textcolors;
         transition: all 0.3s ease-in-out;
+        border-radius: 5rem;
 
         &:before {
             content: "";
@@ -32,6 +27,7 @@
             left: 0;
             background-color: $textcolors;
             transition: all 0.3s ease-in-out;
+            border-radius: 5rem;
         }
 
         &:after {
@@ -43,6 +39,7 @@
             left: 0;
             background-color: $textcolors;
             transition: all 0.3s ease-in-out;
+            border-radius: 5rem;
         }
     }
 }

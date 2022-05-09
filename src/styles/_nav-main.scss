@@ -8,8 +8,10 @@
     height: 0;
     transition: height 0.3s ease, visibility 0s 0.3s;
     font-family: 'Montserrat-Regular';
+    font-size: 1.25rem;
 
     ul {
+        margin: 0.5rem 0;
         text-align: center;
         padding: 0;
         list-style: none;
@@ -18,11 +20,16 @@
     a {
         color: $textcolors;
         text-decoration: none;
+
+        &.active { 
+            text-decoration: underline solid $actioncolors;
+            text-decoration-thickness: 1.5px;
+        }
     }
 }
 
 .show .nav-main {
     transition: height 0.3s ease, visiblity 0s;
     visibility: visible;
-    height: 125px;
+    height: 90px;
 }
