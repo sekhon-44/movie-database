@@ -20,11 +20,11 @@ main {
         display: inline-block;
         align-items: center;
         justify-content: center;
-        height: 400px;
+        height: 26.25rem;
         width: 100%;
 
         .banner-poster {   
-            height: 200px;
+            height: 12.5rem;
             
             img {
                 width: auto;
@@ -35,12 +35,12 @@ main {
         .banner-info {
             background-color: $bannerbox;
             width: 100%;
-            height: 200px;
+            height: 13.75rem;
             position: relative;
         
             .title {
                 margin: 0;
-                padding: 0.5rem;
+                padding: 0.7rem 0.5rem;
                 font-family: 'Montserrat-Bold';
                 color: $textcolors;
             }
@@ -62,27 +62,36 @@ main {
 
         .detail-btn {
             display: inline-block;
-            margin: 0.5rem;
+            margin: 0.3rem 0.5rem;
             padding: 0.3rem;
             border: 1px solid black;
             border-radius: 1rem;
             background-color: $actioncolors;
             color: $textcolors;
+            font-size: 1rem;
             text-decoration: none;
             position: absolute;
             right: 0;
+            bottom: 0.5rem;
+
+            &:hover,
+            &:active, 
+            &:focus {
+                background-color: $backgroundcolor;
+            }
         }
     }
 }
 
 .banner-buttons {
+    margin: 0 0.2rem;
     display: flex;
     justify-content: center;
     font-size: 2rem;
     fill: $actioncolors;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 0.5rem;
 
     object {
         pointer-events: none;
@@ -93,11 +102,19 @@ main {
         cursor: pointer;
         border: none;
         border-radius: 50%;
-        width: 1.75rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1rem;
 
         &.active {
             background-color: $actioncolors;
             color: white;
+        }
+
+        &:hover
+        {
+            background-color: $backgroundcolor;
+            color: $textcolors;
         }
     }
 }
