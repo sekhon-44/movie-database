@@ -1,6 +1,34 @@
 @use 'variables' as *;
 
 .movie-container{
+    margin: 0 auto;
+    background-color: $backgroundcolor;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+        h3{
+            color: $textcolors;
+        }
+        a{
+            color: $textcolors;
+            
+        }
+    
+    
+}
+
+@media (min-width: $desktopsize){
+    .movie-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
+
+img {
+    max-width: 100%;
+}
+
+.movie-container{
     background-color: $backgroundcolor;
     display: grid;
     grid-template-columns: 1fr;
@@ -26,7 +54,7 @@ img {
 .movie-card{
     margin: 0 auto;
     background-color: $navcolor;
-    border: 3px solid white;
+    border: 3px solid $textcolors;
         img {
             width: 100%;
             border-radius: .5rem;

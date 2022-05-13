@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import noPoster from '../images/no-movie-poster.jpg';
 
 function MovieCard({ movie }) {
   return (
@@ -12,6 +13,7 @@ function MovieCard({ movie }) {
         </div>
         <div className="movie-info">
             <h3>{movie.title}</h3>
+            <h3>{movie.vote_average}</h3>
             <Link to="/">More Info</Link>
         </div>
 
