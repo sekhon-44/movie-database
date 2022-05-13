@@ -17,13 +17,17 @@
         list-style: none;
     }
 
+    li {
+        padding: 0.25rem 0;
+    }
+
     a {
         color: $textcolors;
         text-decoration: none;
 
         &.active { 
             text-decoration: underline solid $actioncolors;
-            text-decoration-thickness: 1.5px;
+            text-decoration-thickness: 2px;
         }
     }
 }
@@ -31,5 +35,5 @@
 .show .nav-main {
     transition: height 0.3s ease, visiblity 0s;
     visibility: visible;
-    height: 90px;
+    height: 110px;
 }
