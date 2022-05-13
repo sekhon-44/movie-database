@@ -1,7 +1,6 @@
 @use 'variables' as *;
 
 .movie-container{
-    margin: 0 auto;
     background-color: $backgroundcolor;
     display: grid;
     grid-template-columns: 1fr;
