@@ -1,4 +1,34 @@
 @use 'typography' as *;
 @use 'variables' as *;
 
-.search-bar {}
+.search-bar-field {
+    display: block;
+    width: 100%;
+    font-size: 1.25rem;
+}
+
+.search-results {
+    color: $textcolors;
+    font-family: 'Montserrat-Regular', sans-serif;
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+        padding: 0.5rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $textcolors;
+
+        &:hover,
+        &:active,
+        &:visited {
+            color: $actioncolors;
+        }
+
+    }
+}
