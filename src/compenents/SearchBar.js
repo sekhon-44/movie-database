@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function SearchBar({ onSearchSubmit, clearResults, clearError }) {
+function SearchBar({ onSearchSubmit, clearResults, clearError, openCloseSearchBar }) {
 
     const [query, setQuery] = useState('');
 
@@ -24,6 +24,14 @@ function SearchBar({ onSearchSubmit, clearResults, clearError }) {
         }
     }, [query]);
 
+    // Close search bar when clicking anywhere in the targeted area
+    function closeSearchBar(e) {
+        if (window.innerWidth < 600) {
+            openCloseSearchBar();
+        } 
+        e.target.blur();
+    }
+
     return (
         <div className="search-bar">
             <input type="text"
@@ -32,7 +40,7 @@ function SearchBar({ onSearchSubmit, clearResults, clearError }) {
                 value={debouncedQuery}
                 onChange={(e) => {
                     // Check if the first input value is a "space"
-                    if (e.target.value.indexOf(" ") > -1) {
+                    if (e.target.value.indexOf(" ") > -1 && e.target.value.length === 1) {
                         alert("Space not allowed");
                         return;
                     }

@@ -12,6 +12,8 @@ function Header() {
 
     const [searchResults, setSearchResults] = useState([]);
 
+    const [searchBar, setSearchBar] = useState(false);
+
     const [error, setError] = useState(false);
 
     const errorMessage = 'Search result not found.';
@@ -40,8 +42,11 @@ function Header() {
         if (window.innerWidth < 600) {
             { dropDown && openCloseDropDown() }
         }
-
         e.target.blur();
+    }
+
+    function openCloseSearchBar() {
+        setSearchBar(!searchBar);
     }
 
     // Search for movie 
@@ -69,13 +74,9 @@ function Header() {
         const clearResults = () => setSearchResults([]);
 
     return (
-        <header className={dropDown ? "show" : "hide"}>
-            <svg xmlns="http://www.w3.org/2000/svg" className="search-icon" viewBox="0 0 24 24" onClick={() => {console.log('click')}}><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z" /></svg>
-
-            {/* Search Bar */}
-            <SearchBar onSearchSubmit={query => onSearchSubmit(query)} clearResults={clearResults} clearError={clearError} />
-
-            <SearchResultsContainer searchResults={searchResults} error={error} />
+        // <header className={dropDown ? "showDropDown" : "hideDropDown"}>
+        <header className={`${dropDown ? "showDropDown" : "hideDropDown"} ${searchBar ? "showSearchBar" : "hideSearchBar"}`} >
+            <svg xmlns="http://www.w3.org/2000/svg" className="search-icon" viewBox="0 0 24 24" onClick={openCloseSearchBar}><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z" /></svg>
 
             {/* Logo */}
             <Link to="/" onClick={closeDropDown}>
@@ -91,6 +92,11 @@ function Header() {
 
             {/* Nav menu */}
             <NavMain openCloseDropDown={openCloseDropDown} />
+
+            {/* Search Bar */}
+            <SearchBar onSearchSubmit={query => onSearchSubmit(query)} clearResults={clearResults} clearError={clearError} openCloseSearchBar={openCloseSearchBar}/>
+
+            <SearchResultsContainer searchResults={searchResults} error={error} />
         </header >
     )
 }

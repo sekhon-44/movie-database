@@ -1,10 +1,24 @@
 @use 'typography' as *;
 @use 'variables' as *;
 
+.search-bar {
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease, visibility 0s 0.3s;
+    width: 100%;
+}
+
 .search-bar-field {
     display: block;
     width: 100%;
     font-size: 1.25rem;
+}
+
+.showSearchBar .search-bar {
+    transition: height 0.3s ease, visiblity 0s;
+    visibility: visible;
+    height: 30px;
 }
 
 .search-results {

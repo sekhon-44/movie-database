@@ -2,14 +2,6 @@ import { Link } from "react-router-dom";
 
 function SearchResultsContainer({ searchResults, error }) {
 
-  {
-    searchResults.map(searchResult => {
-      console.log(searchResult.original_title)
-      console.log(searchResult.release_date)
-    }
-    )
-  }
-
   return (
     <div className="search-results">
       <ul>

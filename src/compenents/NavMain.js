@@ -6,8 +6,7 @@ function NavMain({ openCloseDropDown }) {
     function closeDropDown(e) {
         if (window.innerWidth < 600) {
             openCloseDropDown();
-        }
-
+        } 
         e.target.blur();
     }
 
