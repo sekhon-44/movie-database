@@ -27,17 +27,17 @@ function SearchBar({ onSearchSubmit, clearResults, clearError, openCloseSearchBa
     }, [query]);
 
     // Close search bar when clicking anywhere in the targeted area
-    function closeSearchBar(e) {
-        if (window.innerWidth < 600) {
-            openCloseSearchBar();
-        } 
-        e.target.blur();
-    }
+    // function closeSearchBar(e) {
+    //     if (window.innerWidth < 600) {
+    //         openCloseSearchBar();
+    //     } 
+    //     e.target.blur();
+    // }
 
     // Input field flash red when space bar is typed for first character
     function flashRed() {
         setSpacebarError(true);
-        setInterval(function() {
+        setInterval(function () {
             setSpacebarError(false);
         }, 600);
     }
