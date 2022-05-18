@@ -25,10 +25,30 @@
         color: $textcolors;
         text-decoration: none;
 
-        &.active { 
+        &:hover,
+        &:active,
+        &.active {
             text-decoration: underline solid $actioncolors;
             text-decoration-thickness: 2px;
         }
+    }
+
+    @media (min-width: 62.5rem) {
+        display: flex;
+        justify-content: flex-end;
+        visibility: visible;
+        height: auto;
+        width: 30%;
+
+        ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            padding: 0.5rem;
+        }
+
     }
 }
 

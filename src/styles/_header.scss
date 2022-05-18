@@ -8,15 +8,33 @@ header {
     align-items: center;
     background-color: $navcolor;
 
+    @media (min-width: 37.5rem) {
+        padding: 0.5rem 1.5rem;
+    }
+
+    @media (min-width: 62.5rem) {
+        flex-wrap: nowrap;
+        position: relative;
+    }
+
     .search-icon {
         width: 30px;
         height: 30px;
         fill: $textcolors;
+
+        @media (min-width: 62.5rem) {
+            display: none;
+        }
     }
 
     .logo {
+        max-width: 22.5rem;
         width: 60vw;
         height: auto;
+
+        @media (min-width: 62.5rem) {
+            margin: 0 2rem;
+        }
     }
 
     .hamburger-menu {
@@ -25,5 +43,9 @@ header {
         width: 30px;
         background-color: transparent;
         border: none;
+
+        @media (min-width: 62.5rem) {
+            display: none;
+        }
     }
 }

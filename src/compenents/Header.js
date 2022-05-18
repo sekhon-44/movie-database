@@ -39,7 +39,7 @@ function Header() {
 
     // Close dropdown menu when clicking anywhere in the targeted area
     function closeDropDown(e) {
-        if (window.innerWidth < 600) {
+        if (window.innerWidth < 1000) {
             { dropDown && openCloseDropDown() }
             { searchBar && openCloseSearchBar() }
             { searchResults && setSearchResults([]) }

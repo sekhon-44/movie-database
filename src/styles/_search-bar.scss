@@ -26,6 +26,13 @@
         outline: none;
         border: 1px solid red;
     }
+
+    @media (min-width: 62.5rem) {
+        visibility: visible;
+        height: auto;
+        order: -1;
+        width: 30%;
+    }
 }
 
 .showSearchBar .search-bar {

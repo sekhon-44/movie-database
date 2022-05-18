@@ -1,5 +1,6 @@
 @use 'typography' as *;
 @use 'variables' as *;
+
 .search-results {
     color: $textcolors;
     font-family: 'Montserrat-Regular', sans-serif;
@@ -22,7 +23,23 @@
         &:active {
             color: $actioncolors;
         }
+    }
 
+    @media (min-width: 62.5rem) {
+        position: absolute;
+        height: auto;
+        left: 0;
+        top: 88px;
+        background-color: $navcolor;
+        width: 31%;
+
+        ul {
+            margin: 1.5rem;
+        }
+
+        li {
+            padding: 0.5rem 0;
+        }
     }
 }
 

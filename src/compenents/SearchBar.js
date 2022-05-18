@@ -28,7 +28,7 @@ function SearchBar({ onSearchSubmit, clearResults, clearError, openCloseSearchBa
 
     // Close search bar when clicking anywhere in the targeted area
     // function closeSearchBar(e) {
-    //     if (window.innerWidth < 600) {
+    //     if (window.innerWidth < 1000) {
     //         openCloseSearchBar();
     //     } 
     //     e.target.blur();
