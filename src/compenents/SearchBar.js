@@ -8,6 +8,8 @@ function SearchBar({ onSearchSubmit, clearResults, clearError, openCloseSearchBa
 
     const [debouncedQuery, setdebouncedQuery] = useState(query);
 
+    const [spacebarError, setSpacebarError] = useState(false);
+
     useEffect(() => {
         const timer = setTimeout(() => setQuery(debouncedQuery), 1000);
         return () => clearTimeout(timer);
@@ -32,16 +34,24 @@ function SearchBar({ onSearchSubmit, clearResults, clearError, openCloseSearchBa
         e.target.blur();
     }
 
+    // Input field flash red when space bar is typed for first character
+    function flashRed() {
+        setSpacebarError(true);
+        setInterval(function() {
+            setSpacebarError(false);
+        }, 600);
+    }
+
     return (
         <div className="search-bar">
             <input type="text"
-                className="search-bar-field"
+                className={spacebarError ? "search-bar-field-error" : "search-bar-field"}
                 placeholder="i.e. Jurassic Park"
                 value={debouncedQuery}
                 onChange={(e) => {
                     // Check if the first input value is a "space"
                     if (e.target.value.indexOf(" ") > -1 && e.target.value.length === 1) {
-                        alert("Space not allowed");
+                        flashRed();
                         return;
                     }
                     setdebouncedQuery(e.target.value)
