@@ -1,40 +1,51 @@
 @use 'variables' as *;
 
-.nav-bar {
-    background-color: $navcolor;
+header {
+    padding: 0.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    background-color: $navcolor;
+
+    @media (min-width: 37.5rem) {
+        padding: 0.5rem 1.5rem;
+    }
+
+    @media (min-width: 62.5rem) {
+        flex-wrap: nowrap;
+        position: relative;
+    }
 
     .search-icon {
+        width: 30px;
+        height: 30px;
         fill: $textcolors;
+
+        @media (min-width: 62.5rem) {
+            display: none;
+        }
     }
 
-    img { 
-        width: 40vw;
+    .logo {
+        max-width: 22.5rem;
+        width: 60vw;
+        height: auto;
+
+        @media (min-width: 62.5rem) {
+            margin: 0 2rem;
+        }
     }
-}
 
-.nav-main {
-    visibility: hidden;
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    transition: height 0.3s ease, visibility 0s 0.3s;
-
-    ul {
-        text-align: center;
+    .hamburger-menu {
         padding: 0;
-    }
+        display: block;
+        width: 30px;
+        background-color: transparent;
+        border: none;
 
-    a.active {
-        text-decoration: underline $actioncolors;
+        @media (min-width: 62.5rem) {
+            display: none;
+        }
     }
-}
-
-.show .nav-main {
-    transition: height 0.3s ease, visiblity 0s;
-    visibility: visible;
-    height: 125px;
 }

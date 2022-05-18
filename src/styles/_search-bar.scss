@@ -1,0 +1,41 @@
+@use 'typography' as *;
+@use 'variables' as *;
+
+.search-icon:hover {
+    fill: $actioncolors;
+    cursor: pointer;
+}
+
+.search-bar {
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+    width: 100%;
+
+    .search-bar-field {
+        display: block;
+        width: 100%;
+        font-size: 1.25rem;
+        outline-color: $actioncolors;
+    }
+
+    .search-bar-field-error {
+        display: block;
+        width: 100%;
+        font-size: 1.25rem;
+        outline: none;
+        border: 1px solid red;
+    }
+
+    @media (min-width: 62.5rem) {
+        visibility: visible;
+        height: auto;
+        order: -1;
+        width: 30%;
+    }
+}
+
+.showSearchBar .search-bar {
+    visibility: visible;
+    height: 30px;
+}
