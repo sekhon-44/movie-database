@@ -102,7 +102,7 @@ function Header() {
 
             {/* Search Bar */}
             <SearchBar
-                onSearchSubmit={query => onSearch(query)}
+                onSearch={query => onSearch(query)}
                 clearResults={clearResults}
                 clearError={clearError}
                 closeDropDown={closeDropDown} />

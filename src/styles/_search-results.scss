@@ -5,6 +5,7 @@
     color: $textcolors;
     font-family: 'Montserrat-Regular', sans-serif;
     height: 0;
+    z-index: 100;
 
     ul {
         padding: 0;
@@ -48,4 +49,3 @@
     visibility: visible;
     height: auto;
 }
-
