@@ -1,32 +1,34 @@
 import { useEffect, useState } from "react";
 import { API_KEY } from "../globals/globals";
-
+import HeroBanner from "../compenents/HeroBanner";
 
 
 function PageHome() {
 
-    const [movieData, setMovieData] = useState(false);
+    const [bannerMovieData, setBannerMovieData] = useState(false);
 
     useEffect(() => {
 
-        const fetchMovies = async () => {
+        const fetchBannerMovies = async () => {
 
-            const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
+            const response = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`);
 
             const data = await response.json();
 
-            const first12Movies = data.results.splice(0, 12);
+            const first3Movies = data.results.splice(0, 3);
 
-            setMovieData(first12Movies);
+            setBannerMovieData(first3Movies);
 
         }
 
-        fetchMovies();
+        fetchBannerMovies();
 
     }, []);
 
     return (
-        <div>PageHome</div>
+        <section className="home-page">
+            {bannerMovieData !== false && <HeroBanner bannerMovieData={bannerMovieData} />}
+        </section>
     )
 }
 export default PageHome

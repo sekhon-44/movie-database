@@ -1,6 +1,8 @@
-function PageSolo() {
+function PageSolo({movie}) {
     return (
-        <div>PageSolo</div>
+        <div>
+
+        </div>
     )
 }
 export default PageSolo
