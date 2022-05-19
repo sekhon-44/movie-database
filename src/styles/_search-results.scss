@@ -29,16 +29,17 @@
         position: absolute;
         height: auto;
         left: 0;
-        top: 88px;
+        top: 53.5px;
         background-color: $navcolor;
-        width: 31%;
+        width: 30.5%;
 
         ul {
-            margin: 1.5rem;
+            margin: 0.5rem 1.5rem 1.5rem;
         }
 
         li {
             padding: 0.5rem 0;
+            font-size: 1.25rem;
         }
     }
 }

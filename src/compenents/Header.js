@@ -39,13 +39,11 @@ function Header() {
 
     // Close dropdown menu when clicking anywhere in the targeted area
     function closeDropDown(e) {
-        if (window.innerWidth < 1000) {
-            { dropDown && openCloseDropDown() }
-            { searchBar && openCloseSearchBar() }
-            { searchResults && setSearchResults([]) }
-            setError(false);
-            console.log('close');
-        }
+        { dropDown && openCloseDropDown() }
+        { searchBar && openCloseSearchBar() }
+        { searchResults && setSearchResults([]) }
+        setError(false);
+
         e.target.blur();
     }
 
@@ -99,7 +97,7 @@ function Header() {
             {/* Search Bar */}
             <SearchBar onSearchSubmit={query => onSearchSubmit(query)} clearResults={clearResults} clearError={clearError} openCloseSearchBar={openCloseSearchBar} />
 
-            <SearchResultsContainer searchResults={searchResults} error={error} closeDropDown={closeDropDown} />
+            <SearchResultsContainer className={`${searchResults.length === 0 && !error ? "search-results-hide" : "search-results"}`} searchResults={searchResults} error={error} closeDropDown={closeDropDown} />
         </header >
     )
 }

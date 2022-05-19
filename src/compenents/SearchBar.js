@@ -4,8 +4,6 @@ function SearchBar({ onSearchSubmit, clearResults, clearError, openCloseSearchBa
 
     const [query, setQuery] = useState('');
 
-    const [searchResults, setSearchResults] = useState([]);
-
     const [debouncedQuery, setdebouncedQuery] = useState(query);
 
     const [spacebarError, setSpacebarError] = useState(false);
@@ -25,14 +23,6 @@ function SearchBar({ onSearchSubmit, clearResults, clearError, openCloseSearchBa
             clearResults();
         }
     }, [query]);
-
-    // Close search bar when clicking anywhere in the targeted area
-    // function closeSearchBar(e) {
-    //     if (window.innerWidth < 1000) {
-    //         openCloseSearchBar();
-    //     } 
-    //     e.target.blur();
-    // }
 
     // Input field flash red when space bar is typed for first character
     function flashRed() {
