@@ -48,7 +48,7 @@ function PageHome() {
                 }
                 
             }
-            
+            console.log(moviesData)
             grabMovies()
         }, [])
         
