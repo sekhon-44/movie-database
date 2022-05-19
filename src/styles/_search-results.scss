@@ -48,33 +48,3 @@
     height: auto;
 }
 
-// about page
-
-.about-page {
-    background: $backgroundcolor;
-    height: 100vh;
-
-    h2 {
-        color: $actioncolors;
-        font-family: $headerfont;
-        font-size: 2.5rem;
-        padding: 3.5rem 1.5rem 1.5rem;
-        text-align: center;
-        margin: 0;
-    }
-
-    p {
-        color: $textcolors;
-        margin: 3rem 2.5rem;
-        font-family: $regulafont;
-        font-size: 1.2rem;
-    }
-
-    h3 {
-        color: $actioncolors;
-        font-family: $headerfont;
-        font-size: 2rem;
-        padding: 1.5rem;
-        text-align: center;
-    }
-}
