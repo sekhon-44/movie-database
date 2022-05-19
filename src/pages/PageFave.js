@@ -1,6 +1,6 @@
 function PageFave() {
-    return (
-        <div>PageFave</div>
-    )
+  return (
+    <div>PageFave</div>
+  )
 }
 export default PageFave
