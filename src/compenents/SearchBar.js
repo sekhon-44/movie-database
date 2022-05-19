@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function SearchBar({ onSearchSubmit, clearResults, clearError, openCloseSearchBar }) {
+function SearchBar({ onSearch, clearResults, clearError, closeDropDown }) {
 
     const [query, setQuery] = useState('');
 
@@ -18,7 +18,7 @@ function SearchBar({ onSearchSubmit, clearResults, clearError, openCloseSearchBa
         clearError();
 
         if (query !== '') {
-            onSearchSubmit(query);
+            onSearch(query);
         } else {
             clearResults();
         }
