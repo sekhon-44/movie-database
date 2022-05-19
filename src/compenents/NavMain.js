@@ -2,25 +2,17 @@ import { NavLink } from 'react-router-dom';
 
 function NavMain({closeDropDown}) {
 
-    // Close dropdown menu when clicking anywhere in the targeted area
-    // function closeDropDown(e) {
-    //     if (window.innerWidth < 600) {
-    //         openCloseDropDown();
-    //     } 
-    //     e.target.blur();
-    // }
-
     return (
-        <nav className="nav-main" onClick={closeDropDown} >
+        <nav className="nav-main">
             <ul>
                 <li>
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/" onClick={closeDropDown}>Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/about">About</NavLink>
+                    <NavLink to="/about" onClick={closeDropDown}>About</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/favourites">Favourites</NavLink>
+                    <NavLink to="/favourites" onClick={closeDropDown}>Favourites</NavLink>
                 </li>
             </ul>
         </nav>
