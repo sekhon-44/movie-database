@@ -2,16 +2,59 @@
 @use 'variables' as *;
 
 .nav-main {
+    visibility: hidden;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: height 0.3s ease, visibility 0s 0.3s;
     font-family: 'Montserrat-Regular';
+    font-size: 1.25rem;
 
     ul {
+        margin: 0.5rem 0;
+        text-align: center;
+        padding: 0;
         list-style: none;
+    }
 
-        a,
-        a:visited,
-        a:focus {
-            color: $textcolors;
-            text-decoration: none;
+    li {
+        padding: 0.25rem 0;
+    }
+
+    a {
+        color: $textcolors;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &.active {
+            text-decoration: underline solid $actioncolors;
+            text-decoration-thickness: 2px;
         }
     }
+
+    @media (min-width: 62.5rem) {
+        display: flex;
+        justify-content: flex-end;
+        visibility: visible;
+        height: auto;
+        width: 30%;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 375px;
+        }
+
+        li {
+            padding: 0.5rem;
+        }
+    }
+}
+
+.showDropDown .nav-main {
+    transition: height 0.3s ease, visiblity 0s;
+    visibility: visible;
+    height: 110px;
 }

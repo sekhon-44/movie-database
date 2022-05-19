@@ -1,17 +1,18 @@
 import { NavLink } from 'react-router-dom';
 
-function NavMain() {
+function NavMain({closeDropDown}) {
+
     return (
         <nav className="nav-main">
             <ul>
                 <li>
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/" onClick={closeDropDown}>Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/about">About</NavLink>
+                    <NavLink to="/about" onClick={closeDropDown}>About</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/favourites">Favourites</NavLink>
+                    <NavLink to="/favourites" onClick={closeDropDown}>Favourites</NavLink>
                 </li>
             </ul>
         </nav>
