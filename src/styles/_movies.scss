@@ -12,6 +12,9 @@
             color: $textcolors;
             
         }
+        p{
+            color: $textcolors;
+        }
     
     
 }
@@ -59,12 +62,15 @@ img {
             border-radius: .5rem;
         }
 }
+
 .movie-info-static{
     text-align: center;
 }
+
 // .movie-info-hover {
 //     display: none;
 // }
+
 .movie-poster:hover + .movie-info-hover{
     display: block;
 }
