@@ -36,7 +36,7 @@ function SearchBar({ onSearch, clearResults, clearError, closeDropDown }) {
         <div className="search-bar">
             <input type="text"
                 className={spacebarError ? "search-bar-field-error" : "search-bar-field"}
-                placeholder="i.e. Jurassic Park"
+                placeholder="Search for a movie..."
                 value={debouncedQuery}
                 onChange={(e) => {
                     // Check if the first input value is a "space"

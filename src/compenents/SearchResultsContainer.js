@@ -7,7 +7,7 @@ function SearchResultsContainer({ searchResults, error, closeDropDown}) {
       <ul>
         {error !== false && <li>{error}</li>}
         {searchResults.map(searchResult =>
-          <li key={searchResult.id} >
+          <li key={searchResult.id}>
             <Link to={`/movie/${searchResult.id}`} onClick={closeDropDown}>
               {searchResult.original_title} {(typeof (searchResult.release_date) !== 'undefined' && (searchResult.release_date) !== '') && `(${searchResult.release_date.substring(0, 4)})`}
             </Link>
