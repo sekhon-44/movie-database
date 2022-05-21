@@ -55,7 +55,7 @@ function HeroBanner({ bannerMovieData }) {
             onMouseLeave={() => setPaused(false)}>
 
 
-            <div className="poster-container" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
+            <div className="banner-container" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
                 {bannerMovieData.map((bannerMovie, index) => <BannerMovieCard key={bannerMovie.id} movie={bannerMovie} />)}
 
             </div>
