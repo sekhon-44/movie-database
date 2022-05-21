@@ -43,7 +43,7 @@ function Header() {
         { searchBar && openCloseSearchBar() }
         { searchResults && setSearchResults([]) }
         setError(false);
-
+        console.log('close');
         e.target.blur();
     }
 
