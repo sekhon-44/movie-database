@@ -32,6 +32,7 @@
             &:focus{
                 background-color: $hoverbackground;
                 color: $textcolors;
+                border-radius: 1rem;
             }
         }
     }
