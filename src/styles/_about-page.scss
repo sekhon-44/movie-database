@@ -1,28 +1,67 @@
-.about-page {
-    background: $backgroundcolor;
-    height: 100vh;
+@use 'variables' as *;
+@use 'typography' as *;
 
-    h2 {
+.about-page-container {
+    background: $backgroundcolor;
+    @media(min-width: 62.5rem) {
+        height: 100vh;
+        width: 100%;
+    }
+    
+}
+
+.about-page {
+
+    h1 {
         color: $actioncolors;
         font-family: $headerfont;
         font-size: 2.5rem;
         padding: 3.5rem 1.5rem 1.5rem;
         text-align: center;
         margin: 0;
+        @media(min-width: 62.5rem) {
+            padding-top: 5rem;
+            line-height: 1.5;
+        }
     }
 
     p {
         color: $textcolors;
-        margin: 3rem 2.5rem;
+        margin: 0 2.5rem;
         font-family: $regulafont;
         font-size: 1.2rem;
+        @media(min-width: 62.5rem) {
+            margin: 0 25rem;
+        }
     }
 
-    h3 {
+    h2 {
         color: $actioncolors;
         font-family: $headerfont;
         font-size: 2rem;
-        padding: 1.5rem;
         text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+        @media(min-width: 62.5rem) {
+            margin-top: 10rem;
+        }
+        
     }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons svg {
+    background: $textcolors;
+    fill: $actioncolors;
+    border-radius: 0.8em;
+    margin: 1rem;
+    
+}
+
+.social-icons svg:hover {
+    fill: #07cdd7;
 }
