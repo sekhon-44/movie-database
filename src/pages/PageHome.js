@@ -18,7 +18,7 @@ function PageHome() {
 
             const data = await response.json();
 
-            const first3Movies = data.cast.splice(0, 3);
+            const first3Movies = data.results.splice(0, 3);
 
             setBannerMovieData(first3Movies);
 

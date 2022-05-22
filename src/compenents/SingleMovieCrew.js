@@ -1,7 +1,8 @@
 function SingleMovieCrew({ crew }) {
 
     return (
-        <div>
+        <div className="single-movie-crew">
+            <h3>Directors</h3>
             <p>{crew.job === 'Director' && crew.name}</p>
         </div>
     )
