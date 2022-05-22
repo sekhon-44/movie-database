@@ -74,3 +74,24 @@ img {
 .movie-poster:hover + .movie-info-hover{
     display: block;
 }
+
+.detail-btn {
+    display: inline-block;
+    margin: 0.3rem 0.5rem;
+    padding: 0.3rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: $actioncolors;
+    color: $textcolors;
+    font-size: 1rem;
+    text-decoration: none;
+    // position: absolute;
+    right: 0;
+    bottom: 0.5rem;
+
+    &:hover,
+    &:active, 
+    &:focus {
+        background-color: $backgroundcolor;
+    }
+}
