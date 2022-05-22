@@ -1,9 +1,11 @@
-function SingleMovieCrew({ crew }) {
+function SingleMovieCrew({ movieCrews }) {
 
     return (
         <div className="single-movie-crew">
-            <h3>Directors</h3>
-            <p>{crew.job === 'Director' && crew.name}</p>
+            <h2>Directors</h2>
+            <ul>
+                {movieCrews.map((crew, index) => (crew.job === 'Director' && <li key={`${crew.id}-${index}`}>{crew.name}{' '}</li>))}
+            </ul>
         </div>
     )
 }
