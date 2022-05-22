@@ -77,8 +77,8 @@ function Header() {
 
     return (
         <header
-            className={`${dropDown ? "showDropDown" : "hideDropDown"} ${searchBar ? "showSearchBar" : "hideSearchBar"}`}
-            onBlur={(e) => { closeDropDown(e); }}>
+            className={`${dropDown ? "showDropDown" : "hideDropDown"} ${searchBar ? "showSearchBar" : "hideSearchBar"}`}>
+            {/* onBlur={(e) => { closeDropDown(e); } */}
 
             <svg xmlns="http://www.w3.org/2000/svg"
                 className="search-icon"
