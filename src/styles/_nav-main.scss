@@ -42,13 +42,14 @@
 
         ul {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 375px;
         }
 
         li {
             padding: 0.5rem;
         }
-
     }
 }
 

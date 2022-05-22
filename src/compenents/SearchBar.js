@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 
-function SearchBar({ onSearchSubmit, clearResults, clearError, openCloseSearchBar }) {
+function SearchBar({ onSearch, clearResults, clearError, closeDropDown }) {
 
     const [query, setQuery] = useState('');
-
-    const [searchResults, setSearchResults] = useState([]);
 
     const [debouncedQuery, setdebouncedQuery] = useState(query);
 
@@ -20,19 +18,11 @@ function SearchBar({ onSearchSubmit, clearResults, clearError, openCloseSearchBa
         clearError();
 
         if (query !== '') {
-            onSearchSubmit(query);
+            onSearch(query);
         } else {
             clearResults();
         }
     }, [query]);
-
-    // Close search bar when clicking anywhere in the targeted area
-    // function closeSearchBar(e) {
-    //     if (window.innerWidth < 1000) {
-    //         openCloseSearchBar();
-    //     } 
-    //     e.target.blur();
-    // }
 
     // Input field flash red when space bar is typed for first character
     function flashRed() {
@@ -46,7 +36,7 @@ function SearchBar({ onSearchSubmit, clearResults, clearError, openCloseSearchBa
         <div className="search-bar">
             <input type="text"
                 className={spacebarError ? "search-bar-field-error" : "search-bar-field"}
-                placeholder="i.e. Jurassic Park"
+                placeholder="Search for a movie..."
                 value={debouncedQuery}
                 onChange={(e) => {
                     // Check if the first input value is a "space"
