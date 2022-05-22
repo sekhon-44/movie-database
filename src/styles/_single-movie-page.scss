@@ -17,27 +17,26 @@
 
     .single-movie-header {
         text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
 
         h1 {
             text-decoration: underline solid $actioncolors;
-            text-underline-offset: 5px;
+            text-underline-offset: 6px;
             margin: 0;
             font-size: 2rem;
         }
 
-        .heart-icon {
-            fill: $actioncolors;
-            margin: 0 0.5rem;
-        }
-
         .release-date {
+            display: inline-block;
+            position: relative;
             margin: 0.5rem;
             font-size: 1.25rem;
             width: 100%;
+
+            .heart-icon {
+                position: absolute;
+                fill: $actioncolors;
+                margin: 0 0.5rem;
+            }
         }
     }
 
@@ -63,20 +62,30 @@
         }
 
         .movie-genre {
-            display: flex;
             justify-content: center;
             width: 100%;
             margin: 0.5rem 0;
             padding: 0;
             font-size: 1rem;
+            text-align: center;
+
+            @media (min-width: 25rem) {
+                display: flex;
+            }
 
             li {
                 list-style: none;
+                margin: 0.5rem;
+                
+                @media (min-width: 25rem) {
+                    margin: 0.5rem 0;
 
-                &:not(:first-child):before {
-                    margin: 0.5rem;
-                    content: "\2022";
+                    &:not(:first-child):before {
+                        margin: 0.5rem;
+                        content: "\2022";
+                    }
                 }
+
             }
         }
     }
