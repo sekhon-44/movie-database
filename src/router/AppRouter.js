@@ -14,7 +14,7 @@ function App() {
         <Header />
         <main>
           <Routes>
-            <Route path="/" element={<PageHome />} />
+            <Route path="/" element={<PageHome sort='popular' />} />
             <Route path="/sort/popular" element={<PageHome sort='popular'/>} />
             <Route path="/sort/top-rated" element={<PageHome sort='top_rated'/>} />
             <Route path="/sort/now-playing" element={<PageHome sort='now_playing' />} />

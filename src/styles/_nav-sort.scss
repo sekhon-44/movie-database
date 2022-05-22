@@ -1,0 +1,38 @@
+@use 'variables' as *;
+
+.nav-sort{
+    nav{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            gap: 16px;
+                
+        }
+        li {
+            border: 1px solid black;
+            border-radius: 1rem;
+            background-color: $actioncolors;
+        }
+        a {
+            display: block;
+            text-align: center;
+            line-height: 2rem;
+            text-decoration: none;
+            color: $textcolors;
+            &:hover,
+            &:active,
+            &:focus{
+                background-color: $hoverbackground;
+                color: $textcolors;
+            }
+        }
+    }
+}
