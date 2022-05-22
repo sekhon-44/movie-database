@@ -57,8 +57,10 @@ function PageHome({ sort }) {
             
             <div className= "home-page">
               {bannerMovieData !== false && <HeroBanner bannerMovieData={bannerMovieData} />}
-              <NavSort />
-              {moviesData !== false && <Movies movieData={moviesData} />}
+                <div className="layout">
+                    <NavSort />
+                    {moviesData !== false && <Movies movieData={moviesData} />}
+                </div>
             </div>
   )
 }
