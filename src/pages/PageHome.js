@@ -34,24 +34,6 @@ function PageHome({ sort }) {
         
         useEffect(() => {
             
-            // const grabMovies = async () => {
-            //     const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
-                
-            //     const data = await res.json();
-                
-            //     if(data.success === false){
-            //         moviesData !== false && setMoviesData(false);
-                    
-            //     }else{
-            //         const first12Movies = data.results.splice(0,12);
-            //         setMoviesData(first12Movies);
-            //     }
-                
-            // }
-            // console.log(moviesData)
-            // grabMovies()
-
-
             const grabMovies = async () => {
                 const res = await fetch(`https://api.themoviedb.org/3/movie/${sort}?api_key=${API_KEY}&language=en-US&page=1`)
 
