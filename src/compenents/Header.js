@@ -52,6 +52,8 @@ function Header() {
     }
 
     function handleBlur(e) {
+        e.preventDefault();
+        console.log('blur');
         { dropDown && openCloseDropDown() }
         { searchBar && openCloseSearchBar() }
         { searchResults && setSearchResults([]) }
@@ -84,7 +86,7 @@ function Header() {
     const clearResults = () => setSearchResults([]);
 
     return (
-        <header className={`${dropDown ? "showDropDown" : "hideDropDown"} ${searchBar ? "showSearchBar" : "hideSearchBar"}`}>
+        <header className={`${dropDown ? "showDropDown" : "hideDropDown"} ${searchBar ? "showSearchBar" : "hideSearchBar"}`} >
             
             <svg xmlns="http://www.w3.org/2000/svg"
                 className="search-icon"
