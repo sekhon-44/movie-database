@@ -9,20 +9,24 @@ import PageSolo from '../pages/PageSolo';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <div className="wrapper">
-          <Header />
-          <main>
-            <Routes>
-              <Route path="/" element={<PageHome />} />
-              <Route path="/movie/:id" element={<PageSolo />} />
-              <Route path="/about" element={<PageAbout />} />
-              <Route path="/favourites" element={<PageFavs />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </BrowserRouter>
+    <BrowserRouter>
+      <div className="wrapper">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<PageHome sort='popular' />} />
+            <Route path="/sort/popular" element={<PageHome sort='popular'/>} />
+            <Route path="/sort/top-rated" element={<PageHome sort='top_rated'/>} />
+            <Route path="/sort/now-playing" element={<PageHome sort='now_playing' />} />
+            <Route path="/sort/upcoming" element={<PageHome sort='upcoming' />} />
+            <Route path="/movie/:id" element={<PageSolo />}></Route>
+            <Route path="/about" element={<PageAbout />} />
+            <Route path="/favourites" element={<PageFavs />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
     </div>
   );
 
