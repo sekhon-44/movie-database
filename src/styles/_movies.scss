@@ -35,7 +35,7 @@ img {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-        h3{
+        h2{
             color: $textcolors;
         }
         a{
@@ -121,7 +121,7 @@ img {
     grid-template-rows: repeat(2, 1fr), 1rem;
     border-radius: .5rem;
     @media (min-width: $desktopsize) {
-        font-size: .7rem;
+        font-size: .9rem;
     }
 }
 
