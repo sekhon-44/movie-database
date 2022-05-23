@@ -10,9 +10,10 @@ main {
     position: relative;
     overflow: hidden;
     width: 100vw;
+    max-width: 100%;
 }
 
-.poster-container {
+.banner-container {
     white-space: nowrap;
     transition: transform 0.3s;
 
@@ -20,29 +21,54 @@ main {
         display: inline-block;
         align-items: center;
         justify-content: center;
-        height: 26.25rem;
         width: 100%;
 
+        @media (min-width: 62.5rem) {
+            position: relative;
+        }
+
         .banner-poster {   
-            height: 12.5rem;
-            
             img {
-                width: auto;
-                height: 100%;
+                width: 100%;
+
+                @media (min-width: 62.5rem) {
+                    object-fit: cover;
+                    object-position: 60% 40%;
+                    height: 700px;
+                }
             }
         }
 
         .banner-info {
             background-color: $bannerbox;
-            width: 100%;
+            // width: 100%;
             height: 13.75rem;
+            border-radius: .8rem;
             position: relative;
+
+            @media (min-width: 37.5rem) {
+                padding: 0 1.5rem;
+            }
+
+            @media (min-width: 62.5rem) {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                width: 460px;
+                height: 280px;
+                background-color: $bannerboxdesktop;
+            }
         
             .title {
                 margin: 0;
                 padding: 0.7rem 0.5rem;
                 font-family: 'Montserrat-Bold';
                 color: $textcolors;
+
+                @media (min-width: 62.5rem) {
+                    font-size: 1.5rem;
+                    padding: 1rem 0.5rem;
+                }
             }
         
             .overview {
@@ -57,6 +83,12 @@ main {
                 margin: 0;
                 padding: 0 0.5rem;
                 color: $textcolors;
+                height: 120px;
+
+                @media (min-width: 62.5rem) {
+                    font-size: 1.25rem;
+                    height: 150px;
+                }
             }
         }
 
@@ -64,20 +96,27 @@ main {
             display: inline-block;
             margin: 0.3rem 0.5rem;
             padding: 0.3rem;
-            border: 1px solid black;
             border-radius: 1rem;
             background-color: $actioncolors;
             color: $textcolors;
             font-size: 1rem;
             text-decoration: none;
             position: absolute;
-            right: 0;
+            right: 1rem;
             bottom: 0.5rem;
 
             &:hover,
             &:active, 
             &:focus {
                 background-color: $backgroundcolor;
+            }
+
+            @media (min-width: 37.5rem) {
+                margin: 0.3rem 1.5rem;
+            }
+        
+            @media (min-width: 62.5rem) {
+                font-size: 1.25rem;
             }
         }
     }
@@ -92,6 +131,17 @@ main {
     position: absolute;
     left: 0;
     bottom: 0.5rem;
+
+    @media (min-width: 37.5rem) {
+        margin: 0 1.5rem;
+    }
+
+    @media (min-width: 62.5rem) {
+        bottom: 30px;
+        right: 350px;
+        left: auto;
+    }
+}
 
     object {
         pointer-events: none;
@@ -111,10 +161,16 @@ main {
             color: white;
         }
 
-        &:hover
-        {
-            background-color: $backgroundcolor;
-            color: $textcolors;
+        @media (min-width: 62.5rem) {
+            font-size: 1.25rem;
+            width: 2rem;
+            height: 2rem;
+
+            &:hover {
+                background-color: $backgroundcolor;
+                color: $textcolors;
+            }
         }
     }
-}
+
+
