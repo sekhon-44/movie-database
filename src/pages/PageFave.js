@@ -3,4 +3,4 @@ function PageFave() {
     <div></div>
   )
 }
-export default PageFave
+export default PageFave;
