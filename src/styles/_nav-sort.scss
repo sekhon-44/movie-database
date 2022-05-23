@@ -19,7 +19,7 @@
         li {
             border: 1px solid black;
             border-radius: 1rem;
-            background-color: $actioncolors;
+            background-color: $navcolor;
         }
         a {
             display: block;
@@ -30,7 +30,7 @@
             &:hover,
             &:active,
             &:focus{
-                background-color: $hoverbackground;
+                background-color: $actioncolors;
                 color: $textcolors;
                 border-radius: 1rem;
             }

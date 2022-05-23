@@ -48,6 +48,11 @@ img {
 @media (min-width: $desktopsize){
     .movie-container{
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+    }
+    .layout {
+        margin: 0 auto;
+        max-width: 70em;
     }
 }
 img {
@@ -71,6 +76,7 @@ img {
 
 
 .detail-btn {
+    font-family: $headerfont;
     display: inline-block;
     margin: 0.3rem 0.5rem;
     padding: 0.3rem;
@@ -87,14 +93,11 @@ img {
     &:hover,
     &:active, 
     &:focus {
-        background-color: $backgroundcolor;
+        background-color: $hoverbackground;
     }
 }
 
-.layout {
-    margin: 0 auto;
-    max-width: 70em;
-}
+
 
 
 .movie-poster {
@@ -102,10 +105,23 @@ img {
 }
 
 .movie-info-hover {
+    font-family: $headerfont;
+    font-size: .7rem;
     position: absolute;
     background-color: $hoverbackground;
     text-align: center;
     z-index: 1;
     top: 0;
     bottom: 0rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr), 1rem;
+    border-radius: 1rem;
+}
+
+.layout{
+    .movie-container{
+    max-width: 85%;
+    margin: 0 auto;
+    }
 }
