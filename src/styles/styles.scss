@@ -2,6 +2,7 @@
 
 body {
     margin: 0;
+    background-color: $backgroundcolor
 
 }
 
@@ -12,5 +13,7 @@ body {
 @import 'search-bar';
 @import 'search-results';
 @import 'about-page';
-@import 'movies.scss'
+@import 'movies';
+@import 'single-movie-page';
+@import 'nav-sort';
 

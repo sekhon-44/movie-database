@@ -35,7 +35,7 @@ img {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-        h3{
+        h2{
             color: $textcolors;
         }
         a{
@@ -48,6 +48,11 @@ img {
 @media (min-width: $desktopsize){
     .movie-container{
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+    }
+    .layout {
+        margin: 0 auto;
+        max-width: 90em;
     }
 }
 img {
@@ -56,7 +61,9 @@ img {
 .movie-card{
     margin: 0 auto;
     background-color: $navcolor;
-    border: 3px solid $textcolors;
+    box-shadow: 7px 7px 7px;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
         img {
             width: 100%;
             border-radius: .5rem;
@@ -67,10 +74,60 @@ img {
     text-align: center;
 }
 
-// .movie-info-hover {
-//     display: none;
-// }
 
-.movie-poster:hover + .movie-info-hover{
-    display: block;
+.detail-btn {
+    margin: 0 auto;
+    height: fit-content;
+    font-family: $headerfont;
+    display: inline-block;
+    margin: 0.3rem 0.5rem;
+    padding: 0.3rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: $actioncolors;
+    color: $textcolors;
+    font-size: 1rem;
+    text-decoration: none;
+    // position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+
+    &:hover,
+    &:active, 
+    &:focus {
+        background-color: $hoverbackground;
+    }
+   
+}
+
+
+
+
+.movie-poster {
+    position: relative;
+}
+
+.movie-info-hover {
+    font-family: $headerfont;
+    font-size: 1.5rem;
+    position: absolute;
+    background-color: $hoverbackground;
+    text-align: center;
+    z-index: 1;
+    top: 0;
+    bottom: 0rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr), 1rem;
+    border-radius: .5rem;
+    @media (min-width: $desktopsize) {
+        font-size: .9rem;
+    }
+}
+
+.layout{
+    .movie-container{
+    max-width: 85%;
+    margin: 0 auto;
+    }
 }

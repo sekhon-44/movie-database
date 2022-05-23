@@ -50,6 +50,7 @@ main {
             }
 
             @media (min-width: 62.5rem) {
+                border-radius: .8rem;
                 position: absolute;
                 bottom: 20px;
                 right: 20px;
@@ -101,7 +102,7 @@ main {
             font-size: 1rem;
             text-decoration: none;
             position: absolute;
-            right: 0;
+            right: 1rem;
             bottom: 0.5rem;
 
             &:hover,
