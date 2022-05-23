@@ -22,7 +22,7 @@ function MovieCard({ movie }) {
           }
           {isShown && ( 
             <div className="movie-info-hover">
-                <h2>{movie.title}</h2>
+                <h3>{movie.title}</h3>
                 <p>{movie.overview}</p>
                 <Link className={'detail-btn'} to={`/movie/${movie.id}`}>More Info</Link>
             </div>
