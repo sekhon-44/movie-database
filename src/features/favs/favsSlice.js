@@ -1,4 +1,4 @@
-import { API_KEY } from '../globals/globals';
+import { API_KEY } from '../../globals/globals';
 import { createSlice } from '@reduxjs/toolkit';
 
 function getFavs(){
