@@ -1,5 +1,5 @@
 import MovieCard from "./MovieCard";
-import isFav from '../utilities/isFavs';
+import isFav from '../utilites/isFav';
 import { useSelector } from 'react-redux';
 
 function Movies({movieData}) {

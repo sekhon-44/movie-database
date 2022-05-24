@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { API_KEY } from "../globals/globals";
 import SingleMovie from "../compenents/SingleMovie"
 import { useSelector } from 'react-redux';
-import isFav from "../utilities/isFavs";
+import isFav from "../utilites/isFav";
 
 function PageSolo({ movie }) {
 
