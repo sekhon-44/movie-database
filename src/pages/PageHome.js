@@ -3,6 +3,8 @@ import { API_KEY } from "../globals/globals";
 import HeroBanner from "../compenents/HeroBanner";
 import Movies from '../compenents/Movies'
 import NavSort from "../compenents/NavSort";
+import { useSelector } from 'react-redux';
+import isFavs from '../utilities/isFavs';
 
 
 function PageHome({ sort }) {
@@ -11,6 +13,8 @@ function PageHome({ sort }) {
     const [moviesData, setMoviesData] = useState(false);
 
     useEffect(() => {
+
+        const favs = useSelector((state) => state.favs.items);
 
         const fetchBannerMovies = async () => {
 
