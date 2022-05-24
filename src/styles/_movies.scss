@@ -130,7 +130,10 @@ img {
         line-height: 1.5;
         margin: 0;
         padding: 0 0.5rem;
+        height: 185px;
+       @media (min-width: $desktopsize) {
         height: 112px;
+       }
     }
 }
 
