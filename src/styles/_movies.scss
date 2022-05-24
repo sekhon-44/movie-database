@@ -150,5 +150,24 @@ img {
         position: absolute;
         right: .7rem;
         bottom: .5rem;
+        background-color: transparent;
+
+                .fav-heart-icon {
+                    fill: $actioncolors;
+
+                    &:hover,
+                    &:active {
+                        fill: red;
+                    }
+                }
+
+                .unfav-heart-icon {
+                    fill: $actioncolors;
+
+                    &:hover,
+                    &:active {
+                        fill: red;
+                    }
+                }
     }
 }
