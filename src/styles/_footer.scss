@@ -1,0 +1,11 @@
+@use 'variables' as *;
+
+
+footer{
+    color: $textcolorsfooter;
+    text-align: center;
+    font-family: $headerfont;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+
+}
