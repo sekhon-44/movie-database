@@ -1,25 +1,12 @@
 import {Link} from 'react-router-dom';
 import React, { useState } from 'react';
 import noPoster from '../images/no-movie-poster.jpg'
-import FavButton from './FavButton';
-import { useDispatch } from 'react-redux';
-import { addFav, deleteFav } from '../features/favs/favsSlice';
 
-function MovieCard({ movie, isFav }) {
+function MovieCard({ movie }) {
 
   const [isShown, setIsShown] = useState(false);
 
   const ratings = movie.vote_average * 10; 
-
-  const dispatch = useDispatch();
-
-  function handleFavClick(addToFav, obj){
-      if(addToFav === true){
-          dispatch(addFav(obj));
-      }else{
-          dispatch(deleteFav(obj));
-      }   
-  }
 
   return (
     <div className="movie-card">
@@ -43,10 +30,6 @@ function MovieCard({ movie, isFav }) {
         </div>
         <div className="movie-info-static">
             <h3 className="rating">{ratings}&#37;</h3>
-            {isFav ? 
-              <FavButton movie={movie} remove={true} handleFavClick={handleFavClick} /> : 
-              <FavButton movie={movie} handleFavClick={handleFavClick} />
-            }
         </div>  
     </div>
         

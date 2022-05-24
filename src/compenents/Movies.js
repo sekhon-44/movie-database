@@ -1,15 +1,9 @@
-import MovieCard from "./MovieCard";
-import isFav from '../utilities/isFavs';
-import { useSelector } from 'react-redux';
+import MovieCard from "./MovieCard"
 
 function Movies({movieData}) {
-
-  const favs = useSelector((state) => state.favs.items);
-
   return (
     <div className="movie-container">
-          {movieData.map(movie => { 
-            return <MovieCard key={movie.id} movie={movie} isFav={isFav(favs, null, movie.id)} />})}
+          {movieData.map(movie => <MovieCard key={movie.id} movie={movie} />)}
     </div>
   )
 }
