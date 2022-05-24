@@ -40,7 +40,6 @@ function MovieCard({ movie, isFav }) {
                 <Link className={'detail-btn'} to={`/movie/${movie.id}`}>More Info</Link>
             </div>
           )}
-        </div>
         <div className="movie-info-static">
             <h3 className="rating">{ratings}&#37;</h3>
             {isFav ? 
@@ -48,6 +47,7 @@ function MovieCard({ movie, isFav }) {
               <FavButton movie={movie} handleFavClick={handleFavClick} />
             }
         </div>  
+        </div>
     </div>
         
   )
