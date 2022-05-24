@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 .movie-container{
-    background-color: $backgroundcolor;
+    // background-color: $backgroundcolor;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -43,6 +43,7 @@ img {
         }
         p{
             color: $textcolors;
+        
         }
 }
 @media (min-width: $desktopsize){
@@ -60,7 +61,6 @@ img {
 }
 .movie-card{
     margin: 0 auto;
-    background-color: $navcolor;
     box-shadow: 7px 7px 7px;
     border-radius: .5rem;
     margin-bottom: 1rem;
@@ -70,9 +70,7 @@ img {
         }
 }
 
-.movie-info-static{
-    text-align: center;
-}
+
 
 
 .detail-btn {
@@ -103,7 +101,7 @@ img {
 
 
 
-.movie-poster {
+.movie-card {
     position: relative;
 }
 
@@ -129,5 +127,48 @@ img {
     .movie-container{
     max-width: 85%;
     margin: 0 auto;
+    }
+}
+
+.movie-info-static{
+    .rating{
+        z-index: 3;
+        position: absolute;
+        left: .7rem;
+        bottom: 0;
+        border: 4px solid $actioncolors;
+        background-color: $navcolor;
+        border-radius: 30px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        margin: 0.5rem;
+
+    }
+    button{
+        z-index: 2;
+        position: absolute;
+        right: .7rem;
+        bottom: .5rem;
+        background-color: transparent;
+
+                .fav-heart-icon {
+                    fill: $actioncolors;
+
+                    &:hover,
+                    &:active {
+                        fill: red;
+                    }
+                }
+
+                .unfav-heart-icon {
+                    fill: $actioncolors;
+
+                    &:hover,
+                    &:active {
+                        fill: red;
+                    }
+                }
     }
 }
