@@ -11,8 +11,8 @@ function PageFave() {
 
   return (
     <main>
-      <section>
-        <h2>Favourite Movies</h2>
+      <section className='fav-wrapper'>
+        <h1>Favourite Movies</h1>
         {favs.length < 1 ? <p>No favourite movies. Return to the <Link to="/">home</Link> page to add some favourite movies.</p> : 
             <div className="fav-movies-grid">
                 {favs.map((movie, i) => {

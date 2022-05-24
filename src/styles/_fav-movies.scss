@@ -19,12 +19,51 @@
     
 }
 
+.fav-wrapper {
+    h1 {
+        color: $actioncolors;
+        font-family: $headerfont;
+        font-size: 2.5rem;
+        padding: 3.5rem 1.5rem 1.5rem;
+        text-align: center;
+        margin: 0;
+        @media(min-width: 62.5rem) {
+            padding-top: 5rem;
+            line-height: 1.5;
+        }
+    }
+    
+    p {
+        color: $textcolors;
+        margin: 0 2.5rem;
+        font-family: $regulafont;
+        font-size: 1.2rem;
+        @media(min-width: 62.5rem) {
+            text-align: center;
+        }
+    }
+    
+    a {
+        color: $actioncolors;
+        text-decoration: none;
+        
+    }
+    
+    a:hover {
+        text-decoration: underline;
+        color:#07cdd7;
+    }
+}
+
 @media (min-width: $desktopsize){
     .fav-movies-grid{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
 }
+
+
+
 
 img {
     max-width: 100%;
@@ -44,10 +83,42 @@ img {
         p{
             color: $textcolors;
         }
+    
+        .movie-card{
+            margin: 0 3rem;
+            background-color: $navcolor;
+            box-shadow: 7px 7px 7px;
+            border-radius: .5rem;
+            margin-bottom: 1rem;
+                img {
+                    width: 100%;
+                    border-radius: .5rem;
+                }
+        }
+        
+        .movie-poster {
+                        
+
+        }
+            
+    @media(min-width: 46rem) {
+        background-color: $backgroundcolor;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    @media(min-width: 64rem) {
+        background-color: $backgroundcolor;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
 }
 @media (min-width: $desktopsize){
     .fav-movies-grid{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        
         
     }
     .layout {
@@ -58,17 +129,7 @@ img {
 img {
     max-width: 100%;
 }
-.movie-card{
-    margin: 0 auto;
-    background-color: $navcolor;
-    box-shadow: 7px 7px 7px;
-    border-radius: .5rem;
-    margin-bottom: 1rem;
-        img {
-            width: 100%;
-            border-radius: .5rem;
-        }
-}
+
 
 .movie-info-static{
     text-align: center;
@@ -120,6 +181,7 @@ img {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr), 1rem;
     border-radius: .5rem;
+   
     @media (min-width: $desktopsize) {
         font-size: .9rem;
     }
