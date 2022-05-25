@@ -121,6 +121,21 @@ img {
     @media (min-width: $desktopsize) {
         font-size: .9rem;
     }
+    .overview{
+        font-size: 1rem;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0 0.5rem;
+        height: 120px;
+       @media (min-width: $desktopsize) {
+        height: 115px;
+       }
+    }
 }
 
 .layout{
