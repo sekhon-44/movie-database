@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { API_KEY } from "../globals/globals";
 import SingleMovie from "../compenents/SingleMovie"
+import { useSelector } from 'react-redux';
+import isFav from "../utilites/isFav";
 
 function PageSolo({ movie }) {
 
@@ -45,9 +47,11 @@ function PageSolo({ movie }) {
         fetchMovieCasts();
     }, []);
 
+    const favs = useSelector((state) => state.favs.items);
+
     return (
         <section className="solo-movie-container">
-            {(movieData !== false && movieCasts !== false && movieCrews !== false) && <SingleMovie movie={movieData} movieCasts={movieCasts} movieCrews={movieCrews} />}
+            {(movieData !== false && movieCasts !== false && movieCrews !== false) && <SingleMovie movie={movieData} movieCasts={movieCasts} movieCrews={movieCrews} isFav={isFav(favs, null, movieData.id)}/>}
         </section>
     )
 }

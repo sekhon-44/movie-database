@@ -27,11 +27,28 @@
 
     p {
         color: $textcolors;
-        margin: 0 2.5rem;
+        margin: 0 1rem;
         font-family: $regulafont;
         font-size: 1.2rem;
-        @media(min-width: 62.5rem) {
-            margin: 0 25rem;
+        line-height: 1.5;
+        @media(min-width: 40rem) {
+            margin: 0 4rem;
+        }
+        @media(min-width: 48.625rem) {
+            margin: 0 auto;
+            width: 650px;
+        }
+    }
+
+    .tmdb {
+        padding-top: 5rem;
+
+        svg {
+            display: block;
+            fill:url(#linear-gradient);
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
         }
     }
 
@@ -43,7 +60,7 @@
         margin-top: 3rem;
         margin-bottom: 1.5rem;
         @media(min-width: 62.5rem) {
-            margin-top: 10rem;
+            margin-top: 5rem;
         }
         
     }

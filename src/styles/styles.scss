@@ -2,8 +2,13 @@
 
 body {
     margin: 0;
-    background-color: $backgroundcolor
+    background-color: $backgroundcolor;
+    position: relative;
+    min-height: 100vh;
+}
 
+.wrapper {
+    padding-bottom: 2.5rem;
 }
 
 @import 'header';
@@ -16,4 +21,6 @@ body {
 @import 'movies';
 @import 'single-movie-page';
 @import 'nav-sort';
+@import 'fav-movies';
+@import 'footer';
 

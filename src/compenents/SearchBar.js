@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function SearchBar({ onSearch, clearResults, clearError, closeDropDown }) {
+function SearchBar({ onSearch, clearResults, clearError }) {
 
     const [query, setQuery] = useState('');
 
@@ -33,9 +33,10 @@ function SearchBar({ onSearch, clearResults, clearError, closeDropDown }) {
     }
 
     return (
-        <div className="search-bar">
+        <div className="search-input">
             <input type="text"
                 className={spacebarError ? "search-bar-field-error" : "search-bar-field"}
+                id="search-bar"
                 placeholder="Search for a movie..."
                 value={debouncedQuery}
                 onChange={(e) => {

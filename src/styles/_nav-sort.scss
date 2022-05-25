@@ -1,9 +1,11 @@
 @use 'variables' as *;
+@use 'typography' as *;
 
 .nav-sort{
     nav{
         margin-top: 1rem;
         margin-bottom: 1rem;
+        font-family: 'Montserrat-Regular', sans-serif;
         ul{
             margin: 0;
             padding: 0;
