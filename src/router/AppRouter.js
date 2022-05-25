@@ -9,7 +9,7 @@ import PageSolo from '../pages/PageSolo';
 function App() {
   return (
     <div className="App">
-    <BrowserRouter>
+    <BrowserRouter basename="/movie-database">
         <div className="wrapper">
           <Header />
           <main>
