@@ -27,11 +27,16 @@
 
     p {
         color: $textcolors;
-        margin: 0 2.5rem;
+        margin: 0 1rem;
         font-family: $regulafont;
         font-size: 1.2rem;
-        @media(min-width: 62.5rem) {
-            margin: 0 10rem;
+        line-height: 1.5;
+        @media(min-width: 40rem) {
+            margin: 0 4rem;
+        }
+        @media(min-width: 48.625rem) {
+            margin: 0 auto;
+            width: 650px;
         }
     }
 

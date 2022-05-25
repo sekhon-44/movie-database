@@ -226,12 +226,14 @@
 }
 
 .movie-cast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
     @media (min-width: 37.5rem) {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: 1rem;
-        justify-items: center;
+        // grid-template-columns: repeat(5, 1fr);
+        // grid-gap: 1rem;
+        // justify-items: center;
     }
 
     @media (min-width: 50rem) {
@@ -239,11 +241,11 @@
     }
 
     @media (min-width: 77rem) {
-        grid-template-columns: repeat(7, 1fr);
+        // grid-template-columns: repeat(7, 1fr);
     }
 
     h2 {
-        grid-column: 1 / 8;
+        // grid-column: 1 / 8;
         width: 100%;
         margin-bottom: 0.5rem;
         text-decoration: underline solid $actioncolors;
@@ -251,7 +253,9 @@
     }
 
     .movie-cast-card {
-        margin: 2rem;
+        padding: 1rem;
+        max-width: 250px;
+        margin: 0;
 
         img {
             box-shadow: 10px 10px 10px black;
@@ -263,9 +267,14 @@
             margin: 0;
         }
 
+        @media (min-width: 50rem) {
+            max-width: 200px;
+        }
 
         @media (min-width: 62.5rem) {
+            padding: 2rem;
             font-size: 1.25rem;
+            max-width: 250px;
         }
     }
 }
