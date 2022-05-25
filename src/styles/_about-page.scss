@@ -40,6 +40,18 @@
         }
     }
 
+    .tmdb {
+        padding-top: 5rem;
+
+        svg {
+            display: block;
+            fill:url(#linear-gradient);
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+        }
+    }
+
     h2 {
         color: $actioncolors;
         font-family: $headerfont;
@@ -48,7 +60,7 @@
         margin-top: 3rem;
         margin-bottom: 1.5rem;
         @media(min-width: 62.5rem) {
-            margin-top: 10rem;
+            margin-top: 5rem;
         }
         
     }
