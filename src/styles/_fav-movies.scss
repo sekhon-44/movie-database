@@ -150,6 +150,17 @@ img {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    margin: 1rem 2rem;
+
+    @media(min-width: 46rem) {
+        background-color: $backgroundcolor;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media(min-width: 64rem) {
+        background-color: $backgroundcolor;
+        margin: 1rem 4rem;
+    }
 
     h2 {
         color: $textcolors;
@@ -164,7 +175,6 @@ img {
     }
 
     .movie-card {
-        margin: 0 3rem;
         background-color: $navcolor;
         box-shadow: 7px 7px 7px;
         border-radius: .5rem;
@@ -174,22 +184,6 @@ img {
             width: 100%;
             border-radius: .5rem;
         }
-    }
-
-    .movie-poster {}
-
-    @media(min-width: 46rem) {
-        background-color: $backgroundcolor;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-
-    @media(min-width: 64rem) {
-        background-color: $backgroundcolor;
-        display: flex;
-        flex-wrap: wrap;
-
     }
 }
 
