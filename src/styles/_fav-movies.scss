@@ -99,6 +99,10 @@
     }
 
     .movie-info-hover {
+        h2{
+            font-size: 2rem;
+        }
+
         font-family: $headerfont;
         font-size: 1.5rem;
         position: absolute;
@@ -112,8 +116,14 @@
         grid-template-rows: repeat(2, 1fr), 1rem;
         border-radius: .5rem;
 
+        .overview{
+            font-family: $regulafont;
+            font-size: 1.5rem;
+        }
         @media (min-width: $desktopsize) {
-            font-size: .9rem;
+            .overview{
+                font-size: .9375rem;
+            }
         }
     }
 

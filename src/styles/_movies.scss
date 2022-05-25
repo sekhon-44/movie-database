@@ -122,6 +122,7 @@ img {
         font-size: .9rem;
     }
     .overview{
+        font-size: 1rem;
         white-space: normal;
         display: -webkit-box;
         -webkit-line-clamp: 5;
@@ -130,9 +131,9 @@ img {
         line-height: 1.5;
         margin: 0;
         padding: 0 0.5rem;
-        height: 185px;
+        height: 120px;
        @media (min-width: $desktopsize) {
-        height: 112px;
+        height: 115px;
        }
     }
 }
