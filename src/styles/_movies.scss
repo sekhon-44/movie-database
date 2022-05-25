@@ -46,6 +46,13 @@ img {
         
         }
 }
+
+@media(min-width: 37.5rem) {
+    .movie-container{ 
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (min-width: $desktopsize){
     .movie-container{
         grid-template-columns: 1fr 1fr 1fr 1fr;
