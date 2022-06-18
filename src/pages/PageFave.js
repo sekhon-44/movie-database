@@ -1,7 +1,4 @@
-
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import Movies from '../compenents/Movies';
 import { useSelector } from 'react-redux';
 import MovieCard from '../compenents/MovieCard';
 

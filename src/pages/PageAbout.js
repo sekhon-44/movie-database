@@ -1,5 +1,4 @@
 import React from 'react';
-// import AboutPage from '../compenents/AboutPage';
 
 function PageAbout() {
     return (

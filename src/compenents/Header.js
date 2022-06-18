@@ -62,13 +62,6 @@ function Header() {
     }
 
     // Search for movie 
-
-    // https://api.themoviedb.org/3/search/movie?api_key=81121bc2581cfdb0ee8435c1bf9d3ea5&language=en-US&page=1&include_adult=false
-
-    // https://www.youtube.com/watch?v=UKmsNUk7RxM
-
-    // https://javascript.plainenglish.io/how-to-create-an-optimized-real-time-search-with-react-6dd4026f4fa9
-
     const onSearch = async query => {
         const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&include_adult=false`);
 

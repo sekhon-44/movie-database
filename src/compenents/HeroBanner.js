@@ -61,24 +61,12 @@ function HeroBanner({ bannerMovieData }) {
             </div>
 
             <div className="banner-buttons">
-                {/* <a href="#" className="back-arrow" onClick={() => { updateIndex(activeIndex - 1); }}>
-                    <object>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" /></svg>
-                    </object>
-                </a> */}
-
                 {bannerMovieData.map((bannerMovie, index) => {
                     return (<button
                         key={index}
                         className={`${index === activeIndex ? "active" : ""}`}
                         onClick={() => { updateIndex(index); }}>{index + 1}</button>)
                 })}
-
-                {/* <a href="#" className="forward-arrow" onClick={() => { updateIndex(activeIndex + 1); }}>
-                    <object>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" /></svg>
-                    </object>
-                </a> */}
             </div>
 
         </div >

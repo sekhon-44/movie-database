@@ -5,7 +5,7 @@ import SingleMovie from "../compenents/SingleMovie"
 import { useSelector } from 'react-redux';
 import isFav from "../utilites/isFav";
 
-function PageSolo({ movie }) {
+function PageSolo() {
 
     const [movieData, setMovieData] = useState(false);
 
