@@ -15,7 +15,6 @@ function PageSolo() {
 
     const { id } = useParams();
 
-    // https://api.themoviedb.org/3/movie/11?api_key=${API_KEY}&language=en-US
 
     useEffect(() => {
         const fetchMovie = async () => {

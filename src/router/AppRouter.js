@@ -19,7 +19,7 @@ function App() {
               <Route path="/sort/top-rated" element={<PageHome sort='top_rated'/>} />
               <Route path="/sort/now-playing" element={<PageHome sort='now_playing' />} />
               <Route path="/sort/upcoming" element={<PageHome sort='upcoming' />} />
-              <Route path="/movie/:id" element={<PageSolo />}></Route>
+              <Route path="/movie/:id" element={<PageSolo />} />
               <Route path="/about" element={<PageAbout />} />
               <Route path="/favourites" element={<PageFavs />} />
             </Routes>
